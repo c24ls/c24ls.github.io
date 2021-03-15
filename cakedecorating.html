@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <title>CUPCAKE DECORATING!</title>
+    <style type="text/css">
+
+    #pizza {
+        width: 650px;
+        height: 500px;
+        background-image: url(https://secure.img1-fg.wfcdn.com/im/32764650/resize-h800%5Ecompr-r85/7184/71847622/String+of+Pearls+Tiered+Stand.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        top:20px;
+        left:-200px;
+    }
+
+#pepp {
+
+        background-image: url("choco.png");
+        position: relative;
+    top: -20px;
+    left: 5px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    }
+
+    #broc {
+
+        background-image: url(vanilla.png);
+    position: relative;
+    top: -12px;
+    left: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+      
+    }
+
+    #shroom {
+        background-image: url(frost2.png);
+       position:relative;
+    top: -10px;
+    left: 26px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+
+
+    }
+
+    #olive {
+        background-image: url(frost.png);
+    position: relative;
+    top: -5px;
+    left: 22px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    }
+
+    #pineapple {
+        background-image: url(frost3.png);
+        position: relative;
+    top: -5px;
+    left: 22px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    }
+
+    #onion {
+        background-image: url(candle.png);
+        
+    }
+
+    #bacon {
+        background-image: url(lighter.png);
+
+    }
+
+    .topping {
+        width: 150px;
+        height: 150px;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        display: inline-block;
+        position: relative;
+
+
+    }
+
+
+    </style>
+</head>
+<h1>Cupcake Decorating</h1>
+
+<body>
+    <div class="topping" id="pepp"></div>
+    <div class="topping" id="broc"></div>
+    <div class="topping" id="shroom"></div>
+    <div class="topping" id="olive"></div>
+    <div class="topping" id="pineapple"></div>
+    <div class="topping" id="onion"></div>
+    <div class="topping" id="bacon"></div>
+    <div id="pizza"></div>
+
+
+
+    
+
+
+</div>
+
+
+
+    <script type="text/javascript">
+
+
+    var image;
+
+
+
+
+
+    function makeTopping() {
+        var pepp = document.createElement("pepperoni");
+        var angle = Math.floor((Math.random() * 360) + 1);
+        pepp.style.width = "100px";
+        pepp.style.height = "100px";
+        pepp.style.borderRadius = "50%";
+        pepp.style.position = "absolute";
+        pepp.style.backgroundImage = "url(" + image + ")";
+        pepp.style.backgroundSize = "cover";
+
+
+
+
+        pizza.addEventListener("mousemove", function(event) {
+            console.log(event)
+
+        });
+
+
+        pizza.appendChild(pepp);
+
+        pepp.style.left =   event.clientX - 50 + "px";
+        pepp.style.top = event.clientY - 50 + "px";
+
+
+
+    };
+
+    pepp.addEventListener("click", function() {
+
+        image = "choco.png"
+    });
+
+    broc.addEventListener("click", function() {
+
+        image = "vanilla.png"
+
+    });
+
+
+    shroom.addEventListener("click", function() {
+
+        image = "frost2.png"
+    });
+
+
+
+    olive.addEventListener("click", function() {
+
+        image = "frost.png"
+    });
+
+
+    pineapple.addEventListener("click", function() {
+
+        image = "frost3.png"
+    });
+    
+        
+onion.addEventListener("click", function() {
+image = "candle.png" 
+
+});
+    
+
+    bacon.addEventListener("click", function() {
+
+        image = "flames2.gif"
+    });
+
+
+    pizza.addEventListener("click", makeTopping);
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

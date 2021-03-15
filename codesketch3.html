@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		.bolt{
+
+background-color: transparent;
+width:150px;
+height: 150px;
+background-image: url(bolt.png);
+
+background-size:contain;
+display: inline-block;
+position: relative;
+		}
+		
+
+	</style>
+</head>
+<body>
+
+<div class="bolt"> </div>
+
+<script type="text/javascript">
+	function makeBolt () {
+
+		var box=
+		document.createElement("div");
+		document.body.appendChild(box);
+		box.classList.add('bolt')
+	};
+
+	document.addEventListener ("click",
+		makeBolt)
+	
+
+
+
+</script>
+
+</head>
+<body>
+
+</html>

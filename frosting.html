@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    #pizza {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(255, 255, 255);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    #pepp {
+
+        background-image: url("choco.png");
+        background-size: cover;
+    }
+
+    #broc {
+
+        background-image: url(vanilla.png);
+      
+    }
+
+    #shroom {
+        background-image: url(frost2.png)
+
+    }
+
+    #olive {
+        background-image: url(frost.png)
+
+    }
+
+    #pineapple {
+        background-image: url(pineapple.png)
+    }
+
+    #onion {
+        background-image: url(onion.png);
+    }
+
+    #bacon {
+        background-image: url(bacon.png);
+    }
+
+#demobox {
+  background-clip: blue;
+}
+
+
+
+   .topping {
+        width: 100px;
+        height: 100px;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        display: inline-block;
+        position: relative;
+
+
+    }
+    </style>
+</head>
+
+<body>
+    <div class="topping" id="pepp"></div>
+    <div class="topping" id="broc"></div>
+    <div class="topping" id="shroom"></div>
+    <div class="topping" id="olive"></div>
+    <div class="topping" id="pineapple"></div>
+    <div class="topping" id="onion"></div>
+    <div class="topping" id="bacon"></div>
+    <div id="pizza"></div>
+
+<div id="demobox">
+    hjdjd
+</div>
+
+
+    <script type="text/javascript">
+    var image;
+
+
+
+
+
+    function makeTopping() {
+        var pepp = document.createElement("pepperoni");
+        var angle = Math.floor((Math.random() * 360) + 1);
+        pepp.style.width = "100px";
+        pepp.style.height = "100px";
+        pepp.style.borderRadius = "50%";
+        pepp.style.position = "absolute";
+        pepp.style.backgroundImage = "url(" + image + ")";
+        pepp.style.backgroundSize = "cover";
+
+
+
+
+        pizza.addEventListener("mousemove", function(event) {
+            console.log(event)
+
+        });
+
+
+        pizza.appendChild(pepp);
+
+        pepp.style.left =   event.clientX - 50 + "px";
+        pepp.style.top = event.clientY - 50 + "px";
+
+
+
+    };
+
+    pepp.addEventListener("click", function() {
+
+        image = "choco.png"
+    });
+
+    broc.addEventListener("click", function() {
+
+        image = "vanilla.png"
+
+    });
+
+
+    shroom.addEventListener("click", function() {
+
+        image = "frost2.png"
+    });
+
+
+
+    olive.addEventListener("click", function() {
+
+        image = "frost.png"
+    });
+
+
+    pineapple.addEventListener("click", function() {
+
+        image = "pineapple.png"
+    });
+    onion.addEventListener("click", function() {
+
+        image = "onion.png"
+    });
+    bacon.addEventListener("click", function() {
+
+        image = "bacon.png"
+    });
+
+
+    pizza.addEventListener("click", makeTopping);
+    </script>
+</body>
+
+</html>

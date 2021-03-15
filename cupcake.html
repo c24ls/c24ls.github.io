@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    #cake {
+        width: 400px;
+        height: 700px;
+        background-image: url("cake.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+    }
+
+    #sprinkles {
+        background-image: url("sprink.png");
+        background-size: cover;
+        width: 100px;
+        height: 100px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: relative;
+        background-position: center;
+    }
+
+    #pinkfrosting {
+        background-image: url("copy.png");
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: relative;
+        background-position: center;
+    }
+   
+    </style>
+</head>
+
+<body>
+    <div id="pinkfrosting"></div>
+    <div id="bluefrosting"></div>
+    <div id="cake"></div>
+    <div id="sprinkles"></div>
+    <script type="text/javascript">
+    var image;
+    // var cake = document.getElementById("cake")
+
+    function makeTopping() {
+        var topping = document.createElement("top")
+        topping.style.width = "75px";
+        topping.style.height = "75px";
+        topping.style.borderRadius = "50%";
+        topping.style.position = "absolute";
+        topping.style.backgroundImage = "url(" + image + ")";
+        topping.style.backgroundSize = "cover";
+
+        cake.addEventListener("mousemove", function(event) {
+            console.log(event.clientX, event.clientY);
+        });
+
+        cake.appendChild(topping);
+
+        topping.style.left = event.clientX - 50 + "px";
+        topping.style.top = event.clientY - 150 + "px";
+    };
+
+
+    bluefrosting.addEventListener("click", function() {
+
+        image = "blue.png"
+    });
+
+    sprinkles.addEventListener("click", function() {
+
+        image = "sprink.png"
+    });
+    pinkfrosting.addEventListener("click", function() {
+
+        image = "copy.png"
+    });
+    
+
+    cake.addEventListener("click", makeTopping);
+    </script>
+</body>
+
+</html>
