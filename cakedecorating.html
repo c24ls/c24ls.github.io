@@ -12,10 +12,10 @@
 
 
 
-    #pizza {
-        width: 750px;
-        height: 700px;
-        background-image: url("stand.png");
+    #stand {
+        width: 450px;
+        height: 450px;
+        background-image: url("white.png");
         background-repeat: no-repeat;
         background-size: contain;
        
@@ -79,7 +79,7 @@
 
     #bacon {
         background-image: url(flame.gif);
-        background-size: 100%;
+        size: 100%;
         background-image: url(lighter.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -116,7 +116,7 @@
     <div class="topping" id="pineapple"></div>
     <div class="topping" id="onion"></div>
     <div class="topping" id="bacon"></div>
-    <div id="pizza"></div>
+    <div id="stand"></div>
 
 
 
@@ -149,13 +149,13 @@
 
 
 
-        pizza.addEventListener("mousemove", function(event) {
+        stand.addEventListener("mousemove", function(event) {
             console.log(event)
 
         });
 
 
-        pizza.appendChild(pepp);
+        stand.appendChild(pepp);
 
         pepp.style.left =   event.clientX - 50 + "px";
         pepp.style.top = event.clientY - 50 + "px";
@@ -207,7 +207,7 @@ image = "candle.png"
     });
 
 
-    pizza.addEventListener("click", makeTopping);
+    stand.addEventListener("click", makeTopping);
 
 
 
