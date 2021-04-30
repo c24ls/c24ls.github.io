@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lightning Bolts</title>
+    <style type="text/css">
+    .bolts {
+        width: 200px;
+        height: 125px;
+        margin: 5px;
+        display: inline-block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url(yo.png);
+    }
+
+    body{background-color: black;}
+
+
+    </style>
+</head>
+
+<body> 
+
+
+    <script type="text/javascript">
+    function makeBolts() {
+
+        var bolts = document.createElement('div'); //this creates a div tag//
+        bolts.classList.add('bolts'); //this gives the div tag the class of bolts//
+        document.body.appendChild(bolts) //this puts the div with the class of bolts in the body//
+
+    }
+
+setInterval(makeBolts, 1000)
+    </script>
+</body>
+
+</html>
