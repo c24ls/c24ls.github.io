@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Happy Mother's Day</title>
+    <style type="text/css">
+    html {
+        background-color: #ffdbee;
+    }
+
+    .heart {
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100px;
+        height: 100px;
+        position: relative;
+        display: inline-block;
+        font-family: 'Indie Flower', cursive;
+        text-align: center;
+        font-size: 16px;
+        margin: 20px;
+        position: relative;
+        display: inline-block;
+        margin-left: 30px;
+        transition: 1s;
+    }
+
+    .pic {
+        background-image: url("heart.png");
+
+
+    }
+
+    h1 {
+        font-family: 'Indie Flower', cursive;
+        position: relative;
+    }
+
+    h2 {
+        position: fixed;
+        font-family: 'Indie Flower', cursive;
+        bottom: 0;
+        right: 50px;
+    }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>I love you because...</h1>
+    <h2>Happy Mother's Day</h2>
+    <script type="text/javascript">
+    function makeHeart(i) {
+
+
+        var heart = document.createElement("heart");
+
+        document.body.appendChild(heart);
+        heart.classList.add("heart");
+        heart.classList.add("pic");
+        document.body.appendChild(heart);
+
+        heart.addEventListener("click", function() {
+            function remove() {
+                heart.classList.remove("pic");
+                heart.innerHTML = array[i];
+            };
+
+            function add() {
+                heart.classList.add("pic");
+                heart.innerHTML = "";
+            }
+            remove();
+            setTimeout(add, 2000)
+            console.log(event);
+        });
+
+
+        function move() {
+            heart.style.left = Math.round(Math.random() * 70) + "px";
+            heart.style.top = Math.round(Math.random() * 60) - 30 + "px";
+
+        };
+
+        setTimeout(move, 1);
+        setInterval(move, 1000);
+
+
+    };
+
+    var array = [
+
+    "you always make me laugh when I am sad",
+
+        "i can count on you to listen to all of my stories and (usually) pretend to be engaged",
+
+        "you put our feelings before yours",
+
+        "you will take me to countless amounts of doctors to try to help my pain",
+
+        "you always listen to my complaints",
+
+        "you listen to me complain about doctors",
+
+        "you go out of your way to take me to school", 
+
+        "you will always let me tell stories, and will never shut me up",
+
+        "you will do anything for us", 
+
+        "you will always watch fake chiropracter tiktoks with me", 
+
+        "you put up with all of our antics",
+
+         "you make me smile 24/7", 
+
+         "you never stay mad for more than a few minutes", 
+
+         "you are selfless",
+
+          "you are so fun to shop with", 
+
+          "you never give up",
+
+           "you pushed me to go back to PT", 
+
+           "YOU ARE AMAZING", 
+
+           "you help us whenever we need it", 
+
+           "you are loving", 
+
+           "you are the best mom out there."
+    ];
+
+    for (var i = 0; i <= array.length - 1; i++) {
+        makeHeart(i);
+    }
+    </script>
+</body>
+
+</html>

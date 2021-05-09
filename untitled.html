@@ -1,0 +1,82 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+
+	<title>Jordans</title>
+
+	<style type="text/css">
+		
+
+		.title{
+  			font-family: 'Racing Sans One', cursive;
+  			font-size: 50px;
+  			text-decoration: bold;
+  			color: purple;
+  			text-align: center;
+
+		}
+
+
+		#shoes{
+			width: 300px;
+			height: 300px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			display: inline-block;
+			background-position: center;
+			border-color: black;
+			border-width: 1px;
+		}
+
+	</style>
+
+
+<body>
+
+
+	<center>
+		
+			<div class="title">CLICK TO SEE SOME OF MY FAVORITE PHOTOS OF YOU!</div>
+
+				
+
+			<div id="shoes">
+				
+
+			</div>
+
+
+	</center>
+
+	<script type="text/javascript">
+		
+		var colors = ["purple"]
+
+		var images = [
+		"url(tree.JPG)"
+		"url(snow.JPG)"
+		
+		]
+
+		var box = document.getElementById('shoes');
+		
+		box.addEventListener("click", function(){console.log()
+				
+			var shoes = Math.round(Math.random()*9);
+			
+
+			console.log(images[shoes])
+
+			box.style.backgroundImage = images[shoes];
+
+
+	})
+
+
+	</script>
+
+</body>
+</html>
